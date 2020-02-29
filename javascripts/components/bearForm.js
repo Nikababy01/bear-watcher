@@ -1,45 +1,41 @@
 import util from '../helpers/util.js';
 import bearData from '../helpers/data/bearData.js';
+import river from './river.js';
 
-
-
-//add bear event
 
 const bearBtn = (e) => {
-  if(e.target.id='bearSbmBtn') {
-  e.preventDefault();
-  const bears = bearData.getBears()
-  console.log('button is clicked');
-  const newBear =   {
-    id: Date.now(),
-    name: document.getElementById('bear-name').value,
-    imageUrl: document.getElementById('bear-image').value
+    if(e.target.id='bearSbmBtn') {
+    e.preventDefault();
+    const bears = bearData.getBears()
+      const newBear =   {
+      id: Date.now(),
+      name: document.getElementById('bear-name').value,
+      imageUrl: document.getElementById('bear-image').value
+    };
+    bears.push(newBear);
+    document.getElementById('bear-form').reset();
+    river.buildBears();
+   }
   };
-  bears.push(newBear);
-  document.getElementById('bear-form').reset();
-  buildBears();
- }
+  
+
+const bearFormBuilder= ()=>{
+    let domString ='';
+    domString += '<form id="bear-form" class="bear-info">';
+    domString += '<div class="form-group">';
+    domString += '<label for="bear-name"></label>';
+    domString += '<input type="text" class="form-control" id="bear-name"placeholder="Enter Bear Name">';
+    domString += '</div>';
+    domString += '<div class="form-group">';
+    domString += '<label for="bear-image"></label>';
+    domString += '<input type="text" class="form-control" id="bear-image" placeholder="Add Image">';
+    domString += '</div>';
+    domString += '<div>';
+    domString += '<button id="bearSbmBtn" type="submit" class="btn btn-danger">Submit</button>';
+    domString += '</div>';
+    domString += '</form>';
+    domString += '</div>';
+    util.printToDom('brookbears', domString);
+    document.getElementById('bearSbmBtn').addEventListener('click',bearBtn);
 };
-
-
-
-// add domString
-const buildBears =()=>{
-  const allBears = bearData.getBears();
-  let domString = '';
-  allBears.forEach((bears)=>{
-    domString += '<div class="col-4">';
-    domString += `<div class= "card">`;
-    domString += `<img class="bear-photo" src="${bears.imageUrl}" alt="card image">`;
-    domString += '<div class="card-body">';
-    domString += `<h5 class=card-title">${bears.name}</h5>`;
-    domString += '</div>';
-    domString += '</div>';
-    domString += '</div>';
-
-  });
-  util.printToDom('bear-container', domString);
-  document.getElementById('bearSbmBtn').addEventListener('click',bearBtn)
-};
-
-export default { buildBears };
+export default  {bearFormBuilder };
