@@ -8,7 +8,7 @@ const bearBtn = (e) => {
     e.preventDefault();
     const bears = bearData.getBears()
       const newBear =   {
-      id: Date.now(),
+      id: `bear${bears.length + 1}`,
       name: document.getElementById('bear-name').value,
       imageUrl: document.getElementById('bear-image').value
     };
