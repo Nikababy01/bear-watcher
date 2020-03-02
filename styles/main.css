@@ -1,8 +1,12 @@
 body{
-    background-color: lightskyblue;
+    background-image: url("https://blog.explore.org/wp-content/uploads/2018/06/brooks-river-blog-1.jpg");
 }
 
 
 #bear-container{
-    background-color: lightgreen;
+     background-color: lightgreen;
+    
+}
+.brooks-header{
+    text-align: center;
 }
