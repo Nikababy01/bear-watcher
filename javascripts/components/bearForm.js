@@ -32,8 +32,10 @@ const bearFormBuilder= ()=>{
     domString += '<label for="bear-image"></label>';
     domString += '<input type="text" class="form-control" id="bear-image" placeholder="Add Image">';
     domString += '</div>';
+    domString += '<div class= "inline-block">'
     domString += '<div class="bear-button">';
     domString += '<button id="bearSbmBtn" type="submit" class="btn btn-danger">Submit</button>';
+    domString += '</div>';
     domString += '</div>';
     domString += '</form>';
     domString += '</div>';
