@@ -8,9 +8,9 @@ const buildBears =()=>{
   const allBears = bearData.getBears();
   let domString = '';
   allBears.forEach((bears)=>{
-    domString += '<div class="col-4">';
+    domString += '<div class="col-3">';
     domString += `<div class= "card">`;
-    domString += `<img class="img-fluid" src="${bears.imageUrl}" alt="card image">`;
+    domString += `<img class="card-img-top" src="${bears.imageUrl}" alt="card image">`;
     domString += '<div class="card-body text-center">';
     domString += `<h5 class=card-title">${bears.name}</h5>`;
     domString += '</div>';
