@@ -1,11 +1,8 @@
 body{
-    background-color: lightcyan;
-.bear-info{
-   
-    background-color: grey;
-    border: 2px solid black;
+    background-color: lightskyblue;
 }
 
-#bear-form{
-    background-color: green;
+
+#bear-container{
+    background-color: lightgreen;
 }
