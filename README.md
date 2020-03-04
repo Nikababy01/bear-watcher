@@ -2,7 +2,7 @@
 ## Description
  This project was creating modules using the script type "module". We used import and export functions to create the domStrings. On this lesson we learned how to create javascript components and add the modules. We also learned how to create helpers and importing the data with getter and setter methods.
 ## screenshots
-![Main Screen](./screenshots/bears.PNG)
+![Main Screen](./screenshots/bearsonriver.PNG)
 ![Main Screen](./screenshots/form.PNG)
 
 
