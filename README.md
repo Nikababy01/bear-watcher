@@ -6,7 +6,6 @@
 ![Main Screen](./screenshots/form.PNG)
 
 
-
 ## How to run
 1. Clone down this repo
 1. Make sure you have http-server installed via npm. If not get it [HERE] (https://www.npmjs.com/package/http-server)
