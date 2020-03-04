@@ -21,9 +21,9 @@ const bearBtn = (e) => {
 
 const bearFormBuilder= ()=>{
     let domString ='';
-    
+    domString += '<div class="d-flex justify-content-center">';
     domString += '<form id="bear-form" class="bear-info">';
-    domString += '<h1 class="brooks-header">Brooks River</h1>';
+    domString += '<h1 class="brooks-header">Brooks River Bear Reporting</h1>';
     domString += '<div class="form-group">';
     domString += '<label for="bear-name"></label>';
     domString += '<input type="text" class="form-control" id="bear-name"placeholder="Enter Bear Name">';
@@ -38,6 +38,7 @@ const bearFormBuilder= ()=>{
     domString += '</div>';
     domString += '</div>';
     domString += '</form>';
+    domString += '</div>';
     domString += '</div>';
     util.printToDom('brookbears', domString);
     document.getElementById('bearSbmBtn').addEventListener('click',bearBtn);
